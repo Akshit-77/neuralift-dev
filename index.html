@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeuralLift.dev — Deep Learning Solutions</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="logo">
+        <span class="logo-icon">⬡</span>
+        <span>NeuralLift<span class="logo-dot">.dev</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact" class="btn-nav">Get in Touch</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Get in Touch</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="neuralCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span> Now accepting 2026 AI partnerships
+      </div>
+      <h1>Elevating Intelligence,<br /><span class="gradient-text">One Layer at a Time</span></h1>
+      <p class="hero-sub">We build production-grade deep learning systems that transform raw data into competitive advantage — at scale, with precision.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View Our Work</a>
+        <a href="#contact" class="btn-ghost">Start a Project →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><span class="hstat-num" data-target="200">0</span><span>+</span><div class="hstat-label">Models Deployed</div></div>
+        <div class="hstat-sep"></div>
+        <div class="hstat"><span class="hstat-num" data-target="98">0</span><span>%</span><div class="hstat-label">Avg. Accuracy</div></div>
+        <div class="hstat-sep"></div>
+        <div class="hstat"><span class="hstat-num" data-target="40">0</span><span>+</span><div class="hstat-label">Enterprise Clients</div></div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-tag">Who We Are</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>We don't just train models.<br />We <span class="gradient-text">engineer understanding.</span></h2>
+          <p>NeuralLift.dev was founded by researchers from top AI labs who believed the gap between cutting-edge research and real-world deployment was too wide. We bridge it — fast.</p>
+          <p>Our team combines deep academic rigor with battle-tested engineering to deliver systems that are accurate, efficient, and built to last in production.</p>
+          <div class="about-chips">
+            <span>PyTorch</span><span>TensorFlow</span><span>JAX</span><span>CUDA</span>
+            <span>Kubernetes</span><span>MLflow</span><span>Ray</span><span>Triton</span>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="arch-diagram" id="archDiagram">
+            <div class="arch-layer" id="layerInput">
+              <div class="arch-label">Input</div>
+              <div class="arch-nodes">
+                <div class="anode"></div><div class="anode"></div><div class="anode"></div>
+              </div>
+            </div>
+            <div class="arch-layer" id="layerH1">
+              <div class="arch-label">Hidden 1</div>
+              <div class="arch-nodes">
+                <div class="anode"></div><div class="anode"></div><div class="anode"></div><div class="anode"></div>
+              </div>
+            </div>
+            <div class="arch-layer" id="layerH2">
+              <div class="arch-label">Hidden 2</div>
+              <div class="arch-nodes">
+                <div class="anode"></div><div class="anode"></div><div class="anode"></div><div class="anode"></div>
+              </div>
+            </div>
+            <div class="arch-layer" id="layerOutput">
+              <div class="arch-label">Output</div>
+              <div class="arch-nodes">
+                <div class="anode active"></div><div class="anode"></div>
+              </div>
+            </div>
+            <svg class="arch-connections" id="archSvg"></svg>
+          </div>
+          <div class="arch-caption">Interactive Neural Architecture</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section section-dark">
+    <div class="container">
+      <div class="section-tag">What We Do</div>
+      <h2 class="section-title">Deep Learning,<br /><span class="gradient-text">Top to Bottom</span></h2>
+      <p class="section-sub">From raw data ingestion to serving predictions at millisecond latency — we own the entire stack.</p>
+      <div class="services-grid">
+        <div class="service-card" data-index="0">
+          <div class="service-icon">👁</div>
+          <h3>Computer Vision</h3>
+          <p>Object detection, segmentation, OCR, and visual inspection systems trained on your domain data.</p>
+          <div class="service-tags"><span>YOLO</span><span>ViT</span><span>SAM</span></div>
+        </div>
+        <div class="service-card" data-index="1">
+          <div class="service-icon">💬</div>
+          <h3>NLP & LLM Fine-Tuning</h3>
+          <p>Custom language models, RAG pipelines, and document intelligence solutions for enterprise workflows.</p>
+          <div class="service-tags"><span>LLaMA</span><span>BERT</span><span>RAG</span></div>
+        </div>
+        <div class="service-card" data-index="2">
+          <div class="service-icon">📈</div>
+          <h3>Predictive Analytics</h3>
+          <p>Time-series forecasting, anomaly detection, and demand modeling at production scale.</p>
+          <div class="service-tags"><span>LSTM</span><span>Transformer</span><span>XGBoost</span></div>
+        </div>
+        <div class="service-card" data-index="3">
+          <div class="service-icon">⚡</div>
+          <h3>Model Optimization</h3>
+          <p>Quantization, pruning, distillation, and TensorRT conversion for edge and cloud inference.</p>
+          <div class="service-tags"><span>ONNX</span><span>TensorRT</span><span>TFLite</span></div>
+        </div>
+        <div class="service-card" data-index="4">
+          <div class="service-icon">🔄</div>
+          <h3>MLOps & Pipelines</h3>
+          <p>End-to-end ML pipelines with automated retraining, drift detection, and continuous evaluation.</p>
+          <div class="service-tags"><span>MLflow</span><span>Airflow</span><span>Kubeflow</span></div>
+        </div>
+        <div class="service-card" data-index="5">
+          <div class="service-icon">🧬</div>
+          <h3>Research & R&D</h3>
+          <p>Novel architecture design, dataset curation, and state-of-the-art benchmarking for hard problems.</p>
+          <div class="service-tags"><span>Custom</span><span>SOTA</span><span>Papers</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-tag">Case Studies</div>
+      <h2 class="section-title">Built for the <span class="gradient-text">Real World</span></h2>
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="vision">Vision</button>
+        <button class="filter-btn" data-filter="nlp">NLP</button>
+        <button class="filter-btn" data-filter="mlops">MLOps</button>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+
+        <div class="project-card" data-cat="vision">
+          <div class="project-img" style="background: linear-gradient(135deg,#0f2027,#203a43,#2c5364)">
+            <div class="project-overlay">
+              <span class="project-result">↑ 94.2% mAP</span>
+            </div>
+            <div class="project-preview">
+              <div class="pp-scan"></div>
+              <div class="pp-boxes">
+                <div class="pp-box" style="top:20%;left:10%;width:30%;height:40%"></div>
+                <div class="pp-box" style="top:30%;left:55%;width:35%;height:35%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-cat">Computer Vision</div>
+            <h3>Defect Detection at 120fps</h3>
+            <p>Real-time manufacturing QC system processing 4K camera feeds with sub-5ms latency on NVIDIA Jetson.</p>
+            <div class="project-meta">
+              <span>YOLO v9</span><span>TensorRT</span><span>Edge AI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card featured" data-cat="nlp">
+          <div class="project-img" style="background: linear-gradient(135deg,#1a0533,#3d0066,#6600cc)">
+            <div class="project-overlay">
+              <span class="project-result">↑ 3× faster support</span>
+            </div>
+            <div class="project-preview">
+              <div class="pp-chat">
+                <div class="pp-msg pp-user">What's my refund status?</div>
+                <div class="pp-msg pp-bot">Order #4821 refund processed — arrives in 2 days.</div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-cat">NLP · Featured</div>
+            <h3>Enterprise Support LLM</h3>
+            <p>Fine-tuned LLaMA 3 on 2M customer interactions, achieving 89% first-contact resolution for a Fortune 500 retailer.</p>
+            <div class="project-meta">
+              <span>LLaMA 3</span><span>LoRA</span><span>vLLM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-cat="mlops">
+          <div class="project-img" style="background: linear-gradient(135deg,#0d1b2a,#1b4332,#40916c)">
+            <div class="project-overlay">
+              <span class="project-result">↓ 70% infra cost</span>
+            </div>
+            <div class="project-preview">
+              <div class="pp-pipeline">
+                <div class="pp-stage">Ingest</div>
+                <div class="pp-arrow">→</div>
+                <div class="pp-stage">Train</div>
+                <div class="pp-arrow">→</div>
+                <div class="pp-stage">Eval</div>
+                <div class="pp-arrow">→</div>
+                <div class="pp-stage">Serve</div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-cat">MLOps</div>
+            <h3>Automated Retraining Platform</h3>
+            <p>Drift-triggered retraining pipeline on GCP reducing model staleness from weeks to hours across 50+ models.</p>
+            <div class="project-meta">
+              <span>Kubeflow</span><span>GCP</span><span>Evidently</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-cat="vision">
+          <div class="project-img" style="background: linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)">
+            <div class="project-overlay">
+              <span class="project-result">↑ 31% revenue</span>
+            </div>
+            <div class="project-preview">
+              <div class="pp-grid-vis">
+                <div class="pp-gv-cell" style="opacity:0.9"></div>
+                <div class="pp-gv-cell" style="opacity:0.4"></div>
+                <div class="pp-gv-cell" style="opacity:0.7"></div>
+                <div class="pp-gv-cell" style="opacity:1"></div>
+                <div class="pp-gv-cell" style="opacity:0.3"></div>
+                <div class="pp-gv-cell" style="opacity:0.8"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-cat">Computer Vision</div>
+            <h3>Visual Search Engine</h3>
+            <p>Multimodal product search using CLIP embeddings serving 10M queries/day for a global e-commerce platform.</p>
+            <div class="project-meta">
+              <span>CLIP</span><span>FAISS</span><span>FastAPI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-cat="nlp">
+          <div class="project-img" style="background: linear-gradient(135deg,#2d1b00,#5c3317,#8b4513)">
+            <div class="project-overlay">
+              <span class="project-result">↑ 88% F1 score</span>
+            </div>
+            <div class="project-preview">
+              <div class="pp-doc">
+                <div class="pp-doc-line"></div>
+                <div class="pp-doc-highlight"></div>
+                <div class="pp-doc-line"></div>
+                <div class="pp-doc-line short"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-cat">NLP</div>
+            <h3>Legal Document Intelligence</h3>
+            <p>Named entity recognition and clause extraction system processing 10K contracts/day for a leading law firm.</p>
+            <div class="project-meta">
+              <span>SpanBERT</span><span>spaCy</span><span>AWS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-cat="mlops">
+          <div class="project-img" style="background: linear-gradient(135deg,#1a1a00,#3d3300,#665500)">
+            <div class="project-overlay">
+              <span class="project-result">↓ 12ms p99 latency</span>
+            </div>
+            <div class="project-preview">
+              <div class="pp-metrics">
+                <div class="pp-bar" style="--h:60%"></div>
+                <div class="pp-bar" style="--h:80%"></div>
+                <div class="pp-bar" style="--h:45%"></div>
+                <div class="pp-bar active" style="--h:95%"></div>
+                <div class="pp-bar" style="--h:70%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-cat">MLOps</div>
+            <h3>High-Throughput Serving</h3>
+            <p>Triton Inference Server deployment achieving 50K RPS with dynamic batching for a real-time recommendation engine.</p>
+            <div class="project-meta">
+              <span>Triton</span><span>Prometheus</span><span>k8s</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS TICKER -->
+  <section id="stats" class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-num" data-target="200">0</div>
+          <div class="stat-plus">+</div>
+          <div class="stat-label">Models in Production</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="98">0</div>
+          <div class="stat-plus">%</div>
+          <div class="stat-label">Average Model Accuracy</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="5">0</div>
+          <div class="stat-plus">ms</div>
+          <div class="stat-label">Median Inference Latency</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="40">0</div>
+          <div class="stat-plus">+</div>
+          <div class="stat-label">Enterprise Clients</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="12">0</div>
+          <div class="stat-plus">B+</div>
+          <div class="stat-label">Parameters Fine-Tuned</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="section section-dark">
+    <div class="container">
+      <div class="section-tag">The Team</div>
+      <h2 class="section-title">Built by <span class="gradient-text">Researchers</span>,<br />Shipped by Engineers</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#667eea,#764ba2)">
+            <span>AK</span>
+          </div>
+          <div class="team-info">
+            <h3>Arya Krishnamurthy</h3>
+            <div class="team-role">Founder & Chief AI Officer</div>
+            <p>Former DeepMind researcher. PhD in Reinforcement Learning, IIT Bombay. 15 years building AI systems.</p>
+            <div class="team-links">
+              <a href="#" class="tlink">Scholar</a>
+              <a href="#" class="tlink">LinkedIn</a>
+              <a href="#" class="tlink">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#f093fb,#f5576c)">
+            <span>SC</span>
+          </div>
+          <div class="team-info">
+            <h3>Sofia Chen</h3>
+            <div class="team-role">Head of Computer Vision</div>
+            <p>Ex-Meta AI. Pioneered sparse transformer architectures for video understanding. CMU graduate.</p>
+            <div class="team-links">
+              <a href="#" class="tlink">Scholar</a>
+              <a href="#" class="tlink">LinkedIn</a>
+              <a href="#" class="tlink">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#4facfe,#00f2fe)">
+            <span>MR</span>
+          </div>
+          <div class="team-info">
+            <h3>Marcus Reid</h3>
+            <div class="team-role">Head of MLOps</div>
+            <p>Built ML infrastructure for 3 unicorn startups. Expert in distributed training and low-latency inference.</p>
+            <div class="team-links">
+              <a href="#" class="tlink">Scholar</a>
+              <a href="#" class="tlink">LinkedIn</a>
+              <a href="#" class="tlink">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">
+            <span>NP</span>
+          </div>
+          <div class="team-info">
+            <h3>Nadia Petrova</h3>
+            <div class="team-role">NLP Research Lead</div>
+            <p>Published 20+ papers on multilingual LLMs. Previously at Hugging Face core team. Stanford NLP PhD.</p>
+            <div class="team-links">
+              <a href="#" class="tlink">Scholar</a>
+              <a href="#" class="tlink">LinkedIn</a>
+              <a href="#" class="tlink">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="section-tag">What Clients Say</div>
+      <h2 class="section-title">Trusted by <span class="gradient-text">Industry Leaders</span></h2>
+      <div class="testimonials-wrapper">
+        <div class="testimonials-track" id="testimonialsTrack">
+          <div class="testimonial-card">
+            <div class="tcard-quote">"</div>
+            <p>NeuralLift shipped a production-ready vision system in 6 weeks. It passed our QA process with zero rework. These people are serious engineers.</p>
+            <div class="tcard-author">
+              <div class="tcard-avatar" style="background:linear-gradient(135deg,#667eea,#764ba2)">JL</div>
+              <div>
+                <div class="tcard-name">James Liu</div>
+                <div class="tcard-title">VP Engineering · Axiom Manufacturing</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="tcard-quote">"</div>
+            <p>Their MLOps team cut our retraining cycle from 3 weeks to 4 hours. Model drift used to keep us up at night. Not anymore.</p>
+            <div class="tcard-author">
+              <div class="tcard-avatar" style="background:linear-gradient(135deg,#f093fb,#f5576c)">RK</div>
+              <div>
+                <div class="tcard-name">Riya Kapoor</div>
+                <div class="tcard-title">Chief Data Officer · Nexus Fintech</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="tcard-quote">"</div>
+            <p>The LLM they built handles 80% of our tier-1 support automatically. CSAT actually went up. I didn't expect that.</p>
+            <div class="tcard-author">
+              <div class="tcard-avatar" style="background:linear-gradient(135deg,#4facfe,#00f2fe)">TN</div>
+              <div>
+                <div class="tcard-name">Thomas Nguyen</div>
+                <div class="tcard-title">CTO · RetailCore</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="tcard-quote">"</div>
+            <p>World-class research applied to real business problems. NeuralLift doesn't just understand deep learning — they understand business impact.</p>
+            <div class="tcard-author">
+              <div class="tcard-avatar" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">EA</div>
+              <div>
+                <div class="tcard-name">Elena Andersen</div>
+                <div class="tcard-title">Director of AI · MedScan Health</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonials-nav">
+          <button class="tnav-btn" id="tnavPrev">←</button>
+          <div class="tnav-dots" id="tnavDots"></div>
+          <button class="tnav-btn" id="tnavNext">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-dark">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <div class="section-tag">Contact</div>
+          <h2>Let's build something<br /><span class="gradient-text">extraordinary</span></h2>
+          <p>Tell us about your problem. We'll respond within 24 hours with a technical assessment — no sales pitch.</p>
+          <div class="contact-items">
+            <div class="contact-item"><span class="ci-icon">✉</span> admin@neuralift.dev</div>
+            <div class="contact-item"><span class="ci-icon">📍</span> San Francisco · London · Bangalore</div>
+            <div class="contact-item"><span class="ci-icon">🕐</span> Response within 24 hours</div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstName" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastName" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Work Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="project">Project Type</label>
+            <select id="project" name="projectType" required>
+              <option value="" disabled selected>Select a service</option>
+              <option>Computer Vision</option>
+              <option>NLP / LLM Fine-Tuning</option>
+              <option>Predictive Analytics</option>
+              <option>Model Optimization</option>
+              <option>MLOps & Pipelines</option>
+              <option>Research & R&D</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Describe your problem</label>
+            <textarea id="message" name="message" rows="4" placeholder="What are you trying to solve? What data do you have? What does success look like?" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full" id="submitBtn">
+            <span id="btnText">Send Message</span>
+            <span id="btnLoader" style="display:none">Sending…</span>
+          </button>
+          <div id="formSuccess" class="form-success" style="display:none">
+            Message sent! We'll be in touch within 24 hours.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="logo">
+            <span class="logo-icon">⬡</span>
+            <span>NeuralLift<span class="logo-dot">.dev</span></span>
+          </a>
+          <p>Production-grade deep learning solutions for companies that can't afford to be wrong.</p>
+          <div class="social-links">
+            <a href="#" aria-label="GitHub">GH</a>
+            <a href="#" aria-label="LinkedIn">LI</a>
+            <a href="#" aria-label="Twitter">X</a>
+            <a href="#" aria-label="Hugging Face">HF</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Computer Vision</a></li>
+            <li><a href="#services">NLP & LLMs</a></li>
+            <li><a href="#services">Predictive Analytics</a></li>
+            <li><a href="#services">Model Optimization</a></li>
+            <li><a href="#services">MLOps</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Case Studies</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Research Papers</a></li>
+            <li><a href="#">Open Source</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 NeuralLift.dev. All rights reserved.</span>
+        <span>Made with ⬡ and backpropagation.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
