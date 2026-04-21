@@ -1,10 +1,10 @@
-# ⬡ NeuralLift.dev
+# ⬡ Neuralift.dev
 
 > Interactive portfolio website for a deep learning solutions company.
 
 ## Overview
 
-NeuralLift.dev is a fully static, single-page portfolio site built for a hypothetical AI/deep learning company. It is designed for cloud hosting (AWS S3, Netlify, Vercel, GitHub Pages) with no backend required.
+Neuralift.dev is a fully static, single-page portfolio site built for a hypothetical AI/deep learning company. It is designed for cloud hosting (AWS S3, Netlify, Vercel, GitHub Pages) with no backend required.
 
 ## Features
 
